@@ -33,6 +33,8 @@
 
 	<br>
 	<br>
+	<!-- Es un ejemplo de como implentar formularios 
+	que mantengan datos de un return por validacion fallida-->
 	<br> <strong>Forma2</strong>
 	<form action="<s:url action="Pojo"/>" method="post">
 		<table>
@@ -75,6 +77,7 @@
 		<br>
 		
 		<br> <br>Definicion de Variable technologyName
+											<!-- ="'java'" esto intentaria llamar la variable java en el value stack  y como no existe seria nulo-->
 		<s:set name="technologyName" value="%{'Java'}" scope="action" />
 		<!-- Notamos que s:set con scope="action" almacena los valores en action context y en  request.-->
 		<!-- Probar tambien con scope="request" -->
@@ -106,7 +109,7 @@
 		</s:else>
 
 	</p>
-
+	<!-- Visualiza una tabla con el contenido del actionContext -->
 	<s:debug></s:debug>
 	
 </body>
