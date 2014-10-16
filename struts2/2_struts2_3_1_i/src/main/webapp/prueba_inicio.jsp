@@ -18,20 +18,22 @@
 		</ul>
 	</s:if>
 
-	<br><br><br>
-	Forma1
-	<s:form action="Pojo" >
+	<br>
+	<br>
+	<br> <strong>Forma1</strong>
+	<s:form action="Pojo">
 		<s:textfield name="usuarioDTO.nombre" label="*Nombre" />
 		<s:textfield name="usuarioDTO.apellidoPaterno"
 			label="*Apellido Paterno" />
 		<s:textfield name="usuarioDTO.apellidoMaterno"
 			label="Apellido Materno" />
 		<s:textfield name="usuarioDTO.edad" label="*Edad" />
-		<s:submit value="Enviar" align="left"/>
+		<s:submit value="Enviar" align="left" />
 	</s:form>
 
-	<br><br><br>
-	Forma2
+	<br>
+	<br>
+	<br> <strong>Forma2</strong>
 	<form action="<s:url action="Pojo"/>" method="post">
 		<table>
 			<tr>
@@ -55,33 +57,57 @@
 					value='<s:property value="usuarioDTO.edad" />' /></td>
 			</tr>
 			<tr>
-				<td colspan="2"><input type="submit" value="Enviar"/></td>
+				<td colspan="2"><input type="submit" value="Enviar" /></td>
 			<tr>
 		</table>
 	</form>
 
 
-	<br><br><br>
-	Prueba de variables en ActionContext
-	<br>
-	technologyName:
-	<s:set name="technologyName" value="%{'Java en Action'}" scope="action" />
-	<!--<s:set name="technologyName"  value="%{'Java en Request'}" scope="request"/>-->
-
-	<s:if test="#technologyName=='Java en Action'">
-		<div>
-			<s:property value="technologyName" />
-		</div>
-	</s:if>
-	<s:elseif test="#request.technologyName=='Java en Request'">
-		<div>
-			<s:property value="#request.technologyName" />
-		</div>
-	</s:elseif>
-	<s:else>
-		<div>NO Java</div>
-	</s:else>
+	<p>
+		<br><strong>Prueba de Variables en ActionContext</strong>
+		 
+		<br>
+		 
+		<br>(OGNL en ActionContext->ValueStack) usuarioDTO.nombre:
+		<s:property value="usuarioDTO.nombre" />
+		<br>(OGNL en ActionContext) #usuarioDTO.nombre:
+		<s:property value="#usuarioDTO.nombre" />
+		<br>
+		
+		<br> <br>Definicion de Variable technologyName
+		<s:set name="technologyName" value="%{'Java'}" scope="action" />
+		<!-- Notamos que s:set con scope="action" almacena los valores en action context y en  request.-->
+		<!-- Probar tambien con scope="request" -->
 
 
+		<br />if test #technologyName=='Java':
+		<s:if test="#technologyName=='Java'">
+			<br />(ActionContext) <s:property value="#technologyName" />
+		</s:if>
+		<s:else>
+			<br />(No en ActionContext)
+		</s:else>
+
+		<br>if test technologyName=='Java':
+		<s:if test="technologyName=='Java'">
+			<br />(ActionContext->ValueStack) <s:property value="technologyName" />
+		</s:if>
+		<s:else>
+			<br />(No en ActionContext->ValueStack)
+		</s:else>
+
+		<br>if test #request.technologyName=='Java':
+		<s:if test="#request.technologyName=='Java'">
+		<br />(ActionContext->Request) <s:property
+			value="#request.technologyName" />
+		</s:if>
+		<s:else>
+			<br />(No en ActionContext->Request)
+		</s:else>
+
+	</p>
+
+	<s:debug></s:debug>
+	
 </body>
 </html>
