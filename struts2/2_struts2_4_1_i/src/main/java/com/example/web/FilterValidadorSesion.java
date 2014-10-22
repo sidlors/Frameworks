@@ -65,6 +65,10 @@ public class FilterValidadorSesion implements Filter {
 				"/index.html")) {
 			esServletPathLogin = true;
 		}
+		if (((HttpServletRequest) request).getServletPath().equalsIgnoreCase(
+				"/Locale.action")) {
+			esServletPathLogin = true;
+		}
 
 		/*- 
 		 * Podria proteger acceso directo a jsps creando otra variable que indicara si se 

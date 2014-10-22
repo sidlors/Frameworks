@@ -11,8 +11,8 @@
 <h1>Internalizacion y Mensajes</h1>
 
 <h4>
-<s:property value="username"/>
+Username: <s:property value="username"/>
 </h4>
 
-</body>
+<a href="<s:url value="/Logout.action"/>" >Logout</a>
 </html>

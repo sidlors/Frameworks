@@ -2,7 +2,11 @@ package com.example.action;
 
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.apache.log4j.Logger;
+import org.apache.struts2.StrutsStatics;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.ParentPackage;
 import org.apache.struts2.convention.annotation.Result;
@@ -11,6 +15,7 @@ import org.apache.struts2.interceptor.SessionAware;
 import org.apache.struts2.interceptor.validation.SkipValidation;
 
 import com.example.dto.UsuarioDTO;
+import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 @ParentPackage("default")
@@ -31,7 +36,7 @@ public class LoginAction extends ActionSupport implements RequestAware,
 	public String execute() {
 
 		logger.info("execute - entro");
-		
+
 		if (getUsername().equalsIgnoreCase("entrar")
 				&& getPassword().equalsIgnoreCase("entrar")) {
 			UsuarioDTO usuarioDTO = new UsuarioDTO("entrar", "entrar", "entrar");
@@ -50,30 +55,27 @@ public class LoginAction extends ActionSupport implements RequestAware,
 			@Result(name = "input", location = "/login.jsp") })
 	public String logout() {
 
-		logger.info("logout - entro");		
+		logger.info("logout - entro");
 		
-		// Code fragment from class implementing SessionAware containing the
-		// session map in a instance variable "session". Attempting to
-		// invalidate
-		// an already-invalid session will result in an IllegalStateException.
-		if (session instanceof org.apache.struts2.dispatcher.SessionMap) {
-			try {
-				((org.apache.struts2.dispatcher.SessionMap) session)
-						.invalidate();
-			} catch (IllegalStateException e) {
-				logger.error(e);
-			}
-		}
+		final ActionContext actionContext = ActionContext.getContext();
+		HttpServletRequest request = (HttpServletRequest) actionContext.get(StrutsStatics.HTTP_REQUEST);
+		HttpSession httpSession = request.getSession();
+		logger.info("logout - HttpSession#id:"+httpSession.getId());
+		logger.info("logout - SessionMap#id:"+session.get("id"));
+		((org.apache.struts2.dispatcher.SessionMap) session).invalidate();
+
 		return "input";
 
 	}
 
 	public void validate() {
-		if (getUsername()== null || "".equals(getUsername().trim())) {
-			addFieldError(getText("global.username"), getText("username.required"));
+		if (getUsername() == null || "".equals(getUsername().trim())) {
+			addFieldError(getText("global.username"),
+					getText("username.required"));
 		}
-		if (getPassword()== null || "".equals(getPassword().trim())) {
-			addFieldError(getText("global.password"), getText("password.required"));
+		if (getPassword() == null || "".equals(getPassword().trim())) {
+			addFieldError(getText("global.password"),
+					getText("password.required"));
 		}
 	}
 
