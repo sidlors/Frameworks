@@ -1,0 +1,2 @@
+
+a) Notamos dentro del pom.xml inicial, las secciones <dependencies> y <build>
