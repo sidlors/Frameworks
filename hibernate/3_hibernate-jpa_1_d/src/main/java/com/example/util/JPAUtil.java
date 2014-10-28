@@ -9,7 +9,7 @@ public class JPAUtil {
 
 	static {
 		try {
-			emf1 = Persistence.createEntityManagerFactory("COMPLETAR!!!");
+			emf1 = Persistence.createEntityManagerFactory("3_hibernate-jpa_1_d");
 		} catch (Exception ex) {
             // Log the exception. 
             System.err.println("Initial EntityManagerFactory creation failed." + ex);
