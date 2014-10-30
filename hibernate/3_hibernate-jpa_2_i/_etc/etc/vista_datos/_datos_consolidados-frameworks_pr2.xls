@@ -1,0 +1,214 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Version>12.00</Version>
+ </DocumentProperties>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>10005</WindowHeight>
+  <WindowWidth>10005</WindowWidth>
+  <WindowTopX>120</WindowTopX>
+  <WindowTopY>135</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62">
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"
+    ss:Bold="1"/>
+  </Style>
+  <Style ss:ID="s63">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+  <Style ss:ID="s64">
+   <Borders/>
+  </Style>
+  <Style ss:ID="s65">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Table1">
+  <Table ss:ExpandedColumnCount="5" ss:ExpandedRowCount="38" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="60" ss:DefaultRowHeight="15">
+   <Column ss:Width="129"/>
+   <Column ss:Width="82.5"/>
+   <Column ss:Width="223.5"/>
+   <Column ss:Width="95.25"/>
+   <Column ss:Width="90"/>
+   <Row ss:AutoFitHeight="0"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s62"><Data ss:Type="String">acciones_bursatiles</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s63"><Data ss:Type="String">id_accion_bursatil</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">codigo_accion</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">nombre_accion</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">486b453e-7390-4</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Alimento para perros</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">14296e90-d701-4</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Alimento para gatos</Data></Cell>
+   </Row>
+   <Row ss:Index="8" ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s62"><Data ss:Type="String">acciones_categorias</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s63"><Data ss:Type="String">id_accion_bursatil</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">id_categoria</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">2</Data></Cell>
+   </Row>
+   <Row ss:Index="15" ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s62"><Data ss:Type="String">categorias</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s63"><Data ss:Type="String">id_categoria</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">nombre</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">descripcion</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Alimentos</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Todo tipo de accion relacionada con alimentos</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Caninos</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Todo tipo de accion relacionada con perros</Data></Cell>
+   </Row>
+   <Row ss:Index="21" ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s62"><Data ss:Type="String">detalles_acciones</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s65"><Data ss:Type="String">id_detalle_accion</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">nombre_compania</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">descripcion_compania</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">fecha_revision</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">id_accion_bursatil</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">PerroFeliz</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Comida para Perros</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">2013-11-22 23:05:10</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+   </Row>
+   <Row ss:Index="27" ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s62"><Data ss:Type="String">registros_diarios_acciones</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s63"><Data ss:Type="String">id_registro_diario_accion</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">precio_apertura</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">precio_cierre</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">fecha</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">id_accion_bursatil</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">10000</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">50000</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">2013-11-21 21:13:50</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">8000</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">11000</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">2013-11-20 21:13:50</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+   <Row ss:Index="33" ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s62"><Data ss:Type="String">variaciones_diarias</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s63"><Data ss:Type="String">id_variacion_diaria</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">id_registro_diario_accion</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">variacion</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">20000</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">20000</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">3</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">2000</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">4</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">2</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="Number">1000</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Unsynced/>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>300</HorizontalResolution>
+    <VerticalResolution>300</VerticalResolution>
+   </Print>
+   <Selected/>
+   <TopRowVisible>8</TopRowVisible>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>23</ActiveRow>
+     <ActiveCol>2</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

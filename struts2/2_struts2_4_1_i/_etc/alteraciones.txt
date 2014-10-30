@@ -94,4 +94,7 @@ d) En log4j.properties realizar la siguiente sustitucion:
 log4j.rootLogger=DEBUG, stdout
 ...
 
+# opcionalmente para quitar mensajes de tags:
+# freemarker Stuff
+#log4j.logger.freemarker=INFO
 
