@@ -1,0 +1,92 @@
+
+DROP TABLE IF EXISTS acciones_categorias,categorias,variaciones_diarias,registros_diarios_acciones,detalles_acciones,acciones_bursatiles;
+
+CREATE TABLE categorias (
+                id_categoria INT AUTO_INCREMENT NOT NULL,
+                nombre VARCHAR(100) NOT NULL,
+                descripcion VARCHAR(100) NOT NULL,
+                PRIMARY KEY (id_categoria)
+);
+
+
+CREATE TABLE acciones_bursatiles (
+                id_accion_bursatil INT AUTO_INCREMENT NOT NULL,
+                codigo_accion VARCHAR(30) NOT NULL,
+                nombre_accion VARCHAR(100) NOT NULL,
+                PRIMARY KEY (id_accion_bursatil)
+);
+
+
+CREATE TABLE detalles_acciones (
+                id_detalle_accion INT AUTO_INCREMENT NOT NULL,
+                nombre_compania VARCHAR(100) NOT NULL,
+                descripcion_compania VARCHAR(100) NOT NULL,
+                fecha_revision DATETIME NOT NULL,
+                id_accion_bursatil INT NOT NULL,
+                PRIMARY KEY (id_detalle_accion)
+);
+
+
+CREATE UNIQUE INDEX detalles_acciones_idx
+ ON detalles_acciones
+ ( id_accion_bursatil );
+
+CREATE TABLE registros_diarios_acciones (
+                id_registro_diario_accion INT AUTO_INCREMENT NOT NULL,
+                precio_apertura DOUBLE PRECISION NOT NULL,
+                precio_cierre DOUBLE PRECISION NOT NULL,
+                fecha DATETIME NOT NULL,
+                id_accion_bursatil INT NOT NULL,
+                PRIMARY KEY (id_registro_diario_accion)
+);
+
+ALTER TABLE registros_diarios_acciones COMMENT 'sustituir PRECISIONS por PRECISION';
+
+
+CREATE TABLE variaciones_diarias (
+                id_variacion_diaria INT AUTO_INCREMENT NOT NULL,
+                id_registro_diario_accion INT NOT NULL,
+                variacion DOUBLE PRECISION NOT NULL,
+                PRIMARY KEY (id_variacion_diaria)
+);
+
+ALTER TABLE variaciones_diarias COMMENT 'sustituir PRECISIONS por PRECISION';
+
+
+CREATE TABLE acciones_categorias (
+                id_accion_bursatil INT NOT NULL,
+                id_categoria INT NOT NULL,
+                PRIMARY KEY (id_accion_bursatil, id_categoria)
+);
+
+
+ALTER TABLE acciones_categorias ADD CONSTRAINT categorias_acciones_categorias_fk
+FOREIGN KEY (id_categoria)
+REFERENCES categorias (id_categoria)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION;
+
+ALTER TABLE acciones_categorias ADD CONSTRAINT acciones_acciones_categorias_fk
+FOREIGN KEY (id_accion_bursatil)
+REFERENCES acciones_bursatiles (id_accion_bursatil)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION;
+
+ALTER TABLE registros_diarios_acciones ADD CONSTRAINT acciones_registros_diarios_acciones_fk
+FOREIGN KEY (id_accion_bursatil)
+REFERENCES acciones_bursatiles (id_accion_bursatil)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION;
+
+ALTER TABLE detalles_acciones ADD CONSTRAINT acciones_detalles_acciones_relacion_fk
+FOREIGN KEY (id_accion_bursatil)
+REFERENCES acciones_bursatiles (id_accion_bursatil)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION;
+
+ALTER TABLE variaciones_diarias ADD CONSTRAINT registros_diarios_acciones_variaciones_diarias_fk
+FOREIGN KEY (id_registro_diario_accion)
+REFERENCES registros_diarios_acciones (id_registro_diario_accion)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION;
+
