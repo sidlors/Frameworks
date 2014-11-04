@@ -67,8 +67,8 @@ public class OTO_1_AS {
 
 			/*- InicioCaso1 - por restriccion de llave foranea, correcto (inverso puede o no tener 
 			 * cascade=ALL)(default)*/
-			//accionBursatilDAO.persist(accionBursatil);
-			//detalleAccionDAO.persist(detalleAccion);
+			accionBursatilDAO.persist(accionBursatil);
+			detalleAccionDAO.persist(detalleAccion);
 			/*- FinCaso1*/
 
 			/*- InicioCaso2 - cascade=ALL*/
@@ -109,18 +109,18 @@ public class OTO_1_AS {
 			/*- InicioCaso1 -  */
 			/*- por restriccion de llave foranea, correcto si inverso de relacion relacionado 
 			 * tuviera cascade=ALL*/
-			//em.remove(accionBursatilObtenido2);
+			em.remove(accionBursatilObtenido2);
 			/*- FinCaso1*/
 
 			/*- InicioCaso2 - por restriccion de llave foranea,correcto removiendo propietario de 
 			 * relacion y desreferenciando*/
-			//DetalleAccion detalleAccionObtenido2 = accionBursatilObtenido2.getDetalleAccion();
-			//accionBursatilObtenido2.setDetalleAccion(null);
-			//em.remove(detalleAccionObtenido2);			
+			DetalleAccion detalleAccionObtenido2 = accionBursatilObtenido2.getDetalleAccion();
+			accionBursatilObtenido2.setDetalleAccion(null);
+			em.remove(detalleAccionObtenido2);			
 			/*- FinCaso2*/
 			
 			
-			//accionBursatilObtenido2.setDetalleAccion(null);
+			accionBursatilObtenido2.setDetalleAccion(null);
 			
 			/*- >>>FIN - Remove<<<*/
 
