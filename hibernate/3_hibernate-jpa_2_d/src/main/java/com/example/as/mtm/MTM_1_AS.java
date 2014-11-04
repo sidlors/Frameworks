@@ -107,7 +107,7 @@ public class MTM_1_AS {
 			/*- InicioCaso1 - por restriccion de llave foranea, correcto (default)*/
 			accionBursatilDAO.persist(accionBursatil_AlimentoPerros);
 			accionBursatilDAO.persist(accionBursatil_AlimentoGatos);
-			// Thread.sleep(1000*30);//Ver queries
+			 Thread.sleep(1000*30);//Ver queries
 			categoriaDAO.persist(categoria_Alimentos);
 			categoriaDAO.persist(categoria_Caninos);
 			/*- FinCaso1*/
