@@ -21,10 +21,9 @@ public class AccionBursatilDAO {
 	private static final Log log = LogFactory
 			.getLog(AccionBursatilDAO.class);
 
-<<<<<<< HEAD
+
 	//ESta anotacion no haria nada puesto que no estoy en un contenedor (Spring, jboss etc...)
-=======
->>>>>>> bcbc1191c383e8dc081140b9ea55129da4a2642e
+
 	@PersistenceContext
 	private EntityManager entityManager;
 
