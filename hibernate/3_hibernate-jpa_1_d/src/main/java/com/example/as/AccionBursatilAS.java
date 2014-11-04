@@ -14,7 +14,7 @@ public class AccionBursatilAS {
 	public void m1() throws Exception {
 		EntityManager em = null;
 		try {
-<<<<<<< HEAD
+
 			
 			//si el em es manejado por el contenedor esto no seria necesario
 			// yo administro la vida del em
@@ -22,10 +22,10 @@ public class AccionBursatilAS {
 
 			// Si el em fuera manejado por por el contenedor y las transacciones 
 			//son de tipo no extendido (Transaccional) 
-=======
+
 			em = JPAUtil.getEMF1().createEntityManager();
 
->>>>>>> bcbc1191c383e8dc081140b9ea55129da4a2642e
+
 			em.getTransaction().begin();
 
 			AccionBursatilDAO accionBursatilDAO = new AccionBursatilDAO();
