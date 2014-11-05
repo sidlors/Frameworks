@@ -1,24 +1,8 @@
 package com.example.as.mto_otm;
 
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.UUID;
-
-import javax.persistence.EntityManager;
-
-import com.example.dao.AccionBursatilDAO;
-import com.example.dao.RegistroDiarioAccionDAO;
-import com.example.dao.VariacionDiariaDAO;
 //import com.example.entity.AccionBursatil;
 //import com.example.entity.RegistroDiarioAccion;
 //import com.example.entity.VariacionDiaria;
-import com.example.entity.helper.AccionBursatilEH;
-import com.example.entity.helper.RegistroDiarioAccionEH;
-import com.example.entity.helper.VariacionDiariaEH;
-import com.example.util.JPAUtil;
 
 public class MTO_OTM_1_AS {
 

@@ -1,17 +1,7 @@
 package com.example.as.oto;
 
-import java.util.Date;
-import java.util.UUID;
-
-import javax.persistence.EntityManager;
-
-import com.example.dao.AccionBursatilDAO;
-import com.example.dao.DetalleAccionDAO;
 //import com.example.entity.AccionBursatil;
 //import com.example.entity.DetalleAccion;
-import com.example.entity.helper.AccionBursatilEH;
-import com.example.entity.helper.DetalleAccionEH;
-import com.example.util.JPAUtil;
 
 public class OTO_1_AS {
 

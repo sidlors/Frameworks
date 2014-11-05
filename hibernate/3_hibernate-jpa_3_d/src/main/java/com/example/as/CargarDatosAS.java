@@ -1,6 +1,5 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+APPLICATION SERVICE
  */
 package com.example.as;
 
@@ -8,7 +7,6 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
 import java.util.UUID;
 
@@ -16,7 +14,6 @@ import javax.persistence.EntityManager;
 
 import org.apache.log4j.Logger;
 
-import com.example.as.jpql.OperadorEjemplosJPQL_AS;
 import com.example.dao.AccionBursatilDAO;
 import com.example.dao.CategoriaDAO;
 import com.example.dao.DetalleAccionDAO;

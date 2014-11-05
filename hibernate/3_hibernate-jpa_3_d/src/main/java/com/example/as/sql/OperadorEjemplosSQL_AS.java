@@ -1,6 +1,5 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+APPLICATION SERVICE
  */
 package com.example.as.sql;
 
@@ -8,7 +7,6 @@ import java.util.Iterator;
 import java.util.List;
 
 import javax.persistence.EntityManager;
-import javax.persistence.Persistence;
 
 import org.apache.log4j.Logger;
 

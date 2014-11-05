@@ -87,12 +87,10 @@ public class AccionBursatilDAO {
 	/***********************/
 	/***********************/
 
-    
-
     public List<AccionBursatil> jpql_obtenerAccionDTOs() throws Exception {
 
-        //List<AccionBursatilEntity> accionBursatilEntitys = entityManager.createQuery(
-        //        "completar!! - Obtener todas las AccionBursatilEntity").getResultList();
+        //List<AccionBursatilEntity> accionBursatilEntitys = em.createQuery(
+        //        "from AccionBursatilEntity a").getResultList();
         
         List<AccionBursatil> accionBursatilEntitys = entityManager.createQuery(
                 "from AccionBursatil a where a.nombreAccion like :busqueda").
@@ -105,8 +103,7 @@ public class AccionBursatilDAO {
     public List<Object[]> jpql_obtenerAccionDTOsInnerJoinRegistroDiarioDTOs() throws Exception {
 
         List<Object[]> datos = entityManager.createQuery(
-                "completar!! - Obtener todas las AccionBursatilEntity inner join registroDiarioAccionEntityCollection").
-                getResultList();
+                "from AccionBursatil a inner join a.registrosDiariosAcciones a_rd").getResultList();
 
         return datos;
 
@@ -115,7 +112,7 @@ public class AccionBursatilDAO {
     public List<Object[]> jpql_obtenerAccionDTOsLeftJoinRegistroDiarioDTOs() throws Exception {
 
         List<Object[]> datos = entityManager.createQuery(
-                "from AccionBursatilEntity a left join a.registroDiarioAccionEntityCollection a_rd").getResultList();
+                "from AccionBursatil a left join a.registrosDiariosAcciones a_rd").getResultList();
 
         return datos;
 
@@ -124,7 +121,7 @@ public class AccionBursatilDAO {
     public List<Object[]> jpql_obtenerSelect1DeAccion() throws Exception {
 
         List<Object[]> datos = entityManager.createQuery(
-                " select a.codigoAccion, a.nombreAccion from AccionBursatilEntity a "
+                " select a.codigoAccion, a.nombreAccion from AccionBursatil a "
                 + " where a.nombreAccion like :nombreAccion").
                 setParameter("nombreAccion", "%Alimento%").getResultList();
 
@@ -135,7 +132,7 @@ public class AccionBursatilDAO {
     public int jpql_updateAccion(Integer idAccionBursatil) throws Exception {
 
         int res = entityManager.createQuery(
-                " update AccionBursatilEntity a "
+                " update AccionBursatil a "
                 + " set "
                 + " a.codigoAccion = :codigoAccion, "
                 + " a.nombreAccion = :nombreAccion "
@@ -151,8 +148,8 @@ public class AccionBursatilDAO {
     public int jpql_insertAccion(Integer idAccionBursatil) throws Exception {
 
         int res = entityManager.createQuery(
-                " insert into AccionBursatilEntity(codigoAccion,nombreAccion) "
-                + " select a.codigoAccion,a.codigoAccion from AccionBursatilEntity a "
+                " insert into AccionBursatil(codigoAccion,nombreAccion) "
+                + " select a.codigoAccion,a.codigoAccion from AccionBursatil a "
                 + " where a.idAccionBursatil = :idAccionBursatil").
                 setParameter("idAccionBursatil", idAccionBursatil).executeUpdate();
 
@@ -163,7 +160,7 @@ public class AccionBursatilDAO {
     public int jpql_deleteDetalleAccion() throws Exception {
 
         int res = entityManager.createQuery(
-                "completar!! - Eliminar todas las DetalleAccionEntity").
+                " delete DetalleAccion").
                 executeUpdate();
 
         return res;
@@ -171,19 +168,17 @@ public class AccionBursatilDAO {
     }
     
 
-	
 	/***********************/
 	/***********************/
 	/***********************/
-
 
     
 
     public List<Object[]> sql_select() throws Exception {
 
         List<Object[]> datos = entityManager.createNativeQuery(
-                " completar!! - seleccionar codigo_accion, nombre_accion de acciones_bursatiles"+
-                " con nombre_accion like :nombreAccion").
+                " select a.codigo_accion, a.nombre_accion from acciones_bursatiles a "
+                + " where a.nombre_accion like :nombreAccion").
                 setParameter("nombreAccion", "%Alimento%").getResultList();
 
         return datos;
@@ -206,7 +201,7 @@ public class AccionBursatilDAO {
 
 
         int res = entityManager.createNativeQuery(
-                " completar!! - insertar en acciones_bursatiles(codigo_accion, nombre_accion) los valores (:uno, :dos)").
+                "insert into acciones_bursatiles(codigo_accion, nombre_accion) values (:uno, :dos)").
                 setParameter("uno", "uno..").
                 setParameter("dos", "dos..").
                 executeUpdate();
@@ -238,7 +233,6 @@ public class AccionBursatilDAO {
         return res;
 
     }
-    
 	
 	
 	

@@ -12,8 +12,8 @@ import javax.persistence.EntityManager;
 import com.example.dao.AccionBursatilDAO;
 import com.example.dao.RegistroDiarioAccionDAO;
 import com.example.dao.VariacionDiariaDAO;
-import com.example.entity.AccionBursatil;import com.example.entity.RegistroDiarioAccion;
-
+import com.example.entity.AccionBursatil;
+import com.example.entity.RegistroDiarioAccion;
 import com.example.entity.VariacionDiaria;
 import com.example.entity.helper.AccionBursatilEH;
 import com.example.entity.helper.RegistroDiarioAccionEH;

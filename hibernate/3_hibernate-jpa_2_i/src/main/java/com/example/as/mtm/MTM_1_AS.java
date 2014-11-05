@@ -1,20 +1,7 @@
 package com.example.as.mtm;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.UUID;
-
-import javax.persistence.EntityManager;
-
-import com.example.dao.AccionBursatilDAO;
-import com.example.dao.CategoriaDAO;
 //import com.example.entity.AccionBursatil;
 //import com.example.entity.Categoria;
-import com.example.entity.helper.AccionBursatilEH;
-import com.example.entity.helper.CategoriaEH;
-import com.example.util.JPAUtil;
 
 public class MTM_1_AS {
 

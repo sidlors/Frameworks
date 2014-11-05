@@ -2,11 +2,6 @@ package com.example.dao;
 
 // Generated 16/11/2013 12:08:18 AM by Hibernate Tools 4.0.0
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 
 //import com.example.entity.AccionBursatil;
 
