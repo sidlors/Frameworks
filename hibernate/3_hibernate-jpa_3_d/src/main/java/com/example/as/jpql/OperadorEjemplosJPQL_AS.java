@@ -13,9 +13,9 @@ import org.apache.log4j.Logger;
 
 import com.example.as.CargarDatosAS;
 import com.example.dao.AccionBursatilDAO;
-//import com.example.entity.AccionBursatil;
-//import com.example.entity.Categoria;
-//import com.example.entity.RegistroDiarioAccion;
+import com.example.entity.AccionBursatil;
+import com.example.entity.Categoria;
+import com.example.entity.RegistroDiarioAccion;
 import com.example.entity.helper.AccionBursatilEH;
 import com.example.entity.helper.CategoriaEH;
 import com.example.entity.helper.DetalleAccionEH;
@@ -32,202 +32,202 @@ public class OperadorEjemplosJPQL_AS {
 
     public void ejemploFrom() throws Exception {
 
-//        EntityManager em = null;
-//        
-//        try {
-//
-//			em = JPAUtil.getEMF1().createEntityManager();
-//            em.getTransaction().begin();
-//
-//            CargarDatosAS cargadorDatosDAO = new CargarDatosAS();
-//            cargadorDatosDAO.setEntityManager(em);
-//            cargadorDatosDAO.cargarDatos();
-//
-//            AccionBursatilDAO accionBursatilDAO =
-//                    new AccionBursatilDAO();
-//            accionBursatilDAO.setEntityManager(em);
-//            List<AccionBursatil> accionBursatils = accionBursatilDAO.jpql_obtenerAccionDTOs();
-//
-//            System.out.println(">>>accionBursatils.size():"
-//                    +  accionBursatils.size());
-//
-//
-//            Iterator<AccionBursatil> it1 = accionBursatils.iterator();
-//            AccionBursatil accionBursatilTmp;
-//            while (it1.hasNext()) {
-//            	accionBursatilTmp = it1.next();
-//                System.out.println(">>>accionBursatilTmp:"
-//                        + AccionBursatilEH.toString(accionBursatilTmp) );
-//
-//                System.out.println(">>>accionBursatilTmp.getDetalleAccion():"
-//                        + DetalleAccionEH.toString( accionBursatilTmp.getDetalleAccion()) );
-//
-//                Iterator<Categoria> it2 = accionBursatilTmp.getCategorias().iterator();
-//                Categoria categoriaTmp;
-//                while (it2.hasNext()) {
-//                	categoriaTmp = it2.next();
-//                    System.out.println(">>>categoriaTmp:"
-//                            + CategoriaEH.toString(categoriaTmp) );
-//                }
-//
-//            }
-//
-//            em.getTransaction().commit();
-//
-//        } catch (Exception e1_1) {
-//
-//            logger.error("e1_1:" + e1_1.getMessage(), e1_1);
-//            try {
-//                if (em != null && em.getTransaction() != null) {
-//                    em.getTransaction().rollback();
-//                }
-//
-//            } catch (Exception e1_2) {
-//
-//                logger.error("e1_2:" + e1_2.getMessage(), e1_2);
-//                throw e1_2;
-//            }
-//            throw e1_1;
-//        } finally {
-//            if (em != null) {
-//                em.close();
-//            }
-//        }
+        EntityManager em = null;
+        
+        try {
+
+			em = JPAUtil.getEMF1().createEntityManager();
+            em.getTransaction().begin();
+
+            CargarDatosAS cargadorDatosDAO = new CargarDatosAS();
+            cargadorDatosDAO.setEntityManager(em);
+            cargadorDatosDAO.cargarDatos();
+
+            AccionBursatilDAO accionBursatilDAO =
+                    new AccionBursatilDAO();
+            accionBursatilDAO.setEntityManager(em);
+            List<AccionBursatil> accionBursatils = accionBursatilDAO.jpql_obtenerAccionDTOs();
+
+            System.out.println(">>>accionBursatils.size():"
+                    +  accionBursatils.size());
+
+
+            Iterator<AccionBursatil> it1 = accionBursatils.iterator();
+            AccionBursatil accionBursatilTmp;
+            while (it1.hasNext()) {
+            	accionBursatilTmp = it1.next();
+                System.out.println(">>>accionBursatilTmp:"
+                        + AccionBursatilEH.toString(accionBursatilTmp) );
+
+                System.out.println(">>>accionBursatilTmp.getDetalleAccion():"
+                        + DetalleAccionEH.toString( accionBursatilTmp.getDetalleAccion()) );
+
+                Iterator<Categoria> it2 = accionBursatilTmp.getCategorias().iterator();
+                Categoria categoriaTmp;
+                while (it2.hasNext()) {
+                	categoriaTmp = it2.next();
+                    System.out.println(">>>categoriaTmp:"
+                            + CategoriaEH.toString(categoriaTmp) );
+                }
+
+            }
+
+            em.getTransaction().commit();
+
+        } catch (Exception e1_1) {
+
+            logger.error("e1_1:" + e1_1.getMessage(), e1_1);
+            try {
+                if (em != null && em.getTransaction() != null) {
+                    em.getTransaction().rollback();
+                }
+
+            } catch (Exception e1_2) {
+
+                logger.error("e1_2:" + e1_2.getMessage(), e1_2);
+                throw e1_2;
+            }
+            throw e1_1;
+        } finally {
+            if (em != null) {
+                em.close();
+            }
+        }
 
     }
 
     public void ejemploFromInnerJoin() throws Exception {
 
-//        EntityManager em = null;
-//
-//        try {
-//			em = JPAUtil.getEMF1().createEntityManager();
-//            em.getTransaction().begin();
-//
-//            CargarDatosAS cargarDatosAS = new CargarDatosAS();
-//            cargarDatosAS.setEntityManager(em);
-//            cargarDatosAS.cargarDatos();
-//
-//            AccionBursatilDAO accionBursatilDAO =
-//                    new AccionBursatilDAO();
-//            accionBursatilDAO.setEntityManager(em);
-//            List<Object[]> datos =
-//                    accionBursatilDAO.jpql_obtenerAccionDTOsInnerJoinRegistroDiarioDTOs();
-//
-//
-//            System.out.println(">>>datos.size:"
-//                    + datos.size());
-//
-//
-//            Iterator<Object[]> it1 = datos.iterator();
-//            AccionBursatil accionBursatilEntityTmp;
-//            Categoria categoriaEntityTmp;
-//            RegistroDiarioAccion registroDiarioAccionTmp;
-//            while (it1.hasNext()) {
-//                Object[] objectsTmp = it1.next();
-//
-//                System.out.println(">>>objectsTmp.length:"
-//                        + objectsTmp.length);
-//                accionBursatilEntityTmp = (AccionBursatil) objectsTmp[0];
-//                System.out.println(">>>accionBursatilEntityTmp:"
-//                        +  AccionBursatilEH.toString(accionBursatilEntityTmp) );
-//                //categoriaTmp = (Categoria) objectsTmp[1];
-//                //System.out.println(">>>categoriaTmp:"
-//                //        + categoriaTmp);
-//                registroDiarioAccionTmp = (RegistroDiarioAccion) objectsTmp[1];
-//                System.out.println(">>>registroDiarioAccionTmp:"
-//                        + RegistroDiarioAccionEH.toString(registroDiarioAccionTmp) );
-//
-//            }
-//
-//            em.getTransaction().commit();
-//
-//        } catch (Exception e1_1) {
-//
-//            logger.error("e1_1:" + e1_1.getMessage(), e1_1);
-//            try {
-//                if (em != null && em.getTransaction() != null) {
-//                    em.getTransaction().rollback();
-//                }
-//
-//            } catch (Exception e1_2) {
-//
-//                logger.error("e1_2:" + e1_2.getMessage(), e1_2);
-//                throw e1_2;
-//            }
-//            throw e1_1;
-//        } finally {
-//            if (em != null) {
-//                em.close();
-//            }
-//        }
+        EntityManager em = null;
+
+        try {
+			em = JPAUtil.getEMF1().createEntityManager();
+            em.getTransaction().begin();
+
+            CargarDatosAS cargarDatosAS = new CargarDatosAS();
+            cargarDatosAS.setEntityManager(em);
+            cargarDatosAS.cargarDatos();
+
+            AccionBursatilDAO accionBursatilDAO =
+                    new AccionBursatilDAO();
+            accionBursatilDAO.setEntityManager(em);
+            List<Object[]> datos =
+                    accionBursatilDAO.jpql_obtenerAccionDTOsInnerJoinRegistroDiarioDTOs();
+
+
+            System.out.println(">>>datos.size:"
+                    + datos.size());
+
+
+            Iterator<Object[]> it1 = datos.iterator();
+            AccionBursatil accionBursatilEntityTmp;
+            Categoria categoriaEntityTmp;
+            RegistroDiarioAccion registroDiarioAccionTmp;
+            while (it1.hasNext()) {
+                Object[] objectsTmp = it1.next();
+
+                System.out.println(">>>objectsTmp.length:"
+                        + objectsTmp.length);
+                accionBursatilEntityTmp = (AccionBursatil) objectsTmp[0];
+                System.out.println(">>>accionBursatilEntityTmp:"
+                        +  AccionBursatilEH.toString(accionBursatilEntityTmp) );
+                //categoriaTmp = (Categoria) objectsTmp[1];
+                //System.out.println(">>>categoriaTmp:"
+                //        + categoriaTmp);
+                registroDiarioAccionTmp = (RegistroDiarioAccion) objectsTmp[1];
+                System.out.println(">>>registroDiarioAccionTmp:"
+                        + RegistroDiarioAccionEH.toString(registroDiarioAccionTmp) );
+
+            }
+
+            em.getTransaction().commit();
+
+        } catch (Exception e1_1) {
+
+            logger.error("e1_1:" + e1_1.getMessage(), e1_1);
+            try {
+                if (em != null && em.getTransaction() != null) {
+                    em.getTransaction().rollback();
+                }
+
+            } catch (Exception e1_2) {
+
+                logger.error("e1_2:" + e1_2.getMessage(), e1_2);
+                throw e1_2;
+            }
+            throw e1_1;
+        } finally {
+            if (em != null) {
+                em.close();
+            }
+        }
 
     }
 
     public void ejemploFromOuterJoin() throws Exception {
 
-//        EntityManager em = null;
-//
-//        try {
-//			em = JPAUtil.getEMF1().createEntityManager();
-//            em.getTransaction().begin();
-//
-//            CargarDatosAS cargarDatosAS = new CargarDatosAS();
-//            cargarDatosAS.setEntityManager(em);
-//            cargarDatosAS.cargarDatos();
-//
-//            AccionBursatilDAO accionBursatilDAO =
-//                    new AccionBursatilDAO();
-//            accionBursatilDAO.setEntityManager(em);
-//            List<Object[]> datos = accionBursatilDAO.jpql_obtenerAccionDTOsLeftJoinRegistroDiarioDTOs();
-//
-//
-//            System.out.println(">>>accionDTOs.size:"
-//                    + datos.size());
-//
-//
-//            Iterator<Object[]> it1 = datos.iterator();
-//            AccionBursatil accionBursatilTmp;
-//            Categoria categoriaTmp;
-//            RegistroDiarioAccion registroDiarioAccionTmp;
-//            while (it1.hasNext()) {
-//                Object[] objectsTmp = it1.next();
-//
-//                System.out.println(">>>objectsTmp.length:"
-//                        + objectsTmp.length);
-//                accionBursatilTmp = (AccionBursatil) objectsTmp[0];
-//                System.out.println(">>>accionBursatilTmp:"
-//                        + AccionBursatilEH.toString(accionBursatilTmp) );
-//                //categoriaTmp = (Categoria) objectsTmp[1];
-//                //System.out.println(">>>categoriaTmp:"
-//                //        + categoriaTmp);
-//                registroDiarioAccionTmp = (RegistroDiarioAccion) objectsTmp[1];
-//                System.out.println(">>>RegistroDiarioAccion:"
-//                        + RegistroDiarioAccionEH.toString(registroDiarioAccionTmp) );
-//
-//            }
-//
-//            em.getTransaction().commit();
-//
-//        } catch (Exception e1_1) {
-//
-//            logger.error("e1_1:" + e1_1.getMessage(), e1_1);
-//            try {
-//                if (em != null && em.getTransaction() != null) {
-//                    em.getTransaction().rollback();
-//                }
-//
-//            } catch (Exception e1_2) {
-//
-//                logger.error("e1_2:" + e1_2.getMessage(), e1_2);
-//                throw e1_2;
-//            }
-//            throw e1_1;
-//        } finally {
-//            if (em != null) {
-//                em.close();
-//            }
-//        }
+        EntityManager em = null;
+
+        try {
+			em = JPAUtil.getEMF1().createEntityManager();
+            em.getTransaction().begin();
+
+            CargarDatosAS cargarDatosAS = new CargarDatosAS();
+            cargarDatosAS.setEntityManager(em);
+            cargarDatosAS.cargarDatos();
+
+            AccionBursatilDAO accionBursatilDAO =
+                    new AccionBursatilDAO();
+            accionBursatilDAO.setEntityManager(em);
+            List<Object[]> datos = accionBursatilDAO.jpql_obtenerAccionDTOsLeftJoinRegistroDiarioDTOs();
+
+
+            System.out.println(">>>accionDTOs.size:"
+                    + datos.size());
+
+
+            Iterator<Object[]> it1 = datos.iterator();
+            AccionBursatil accionBursatilTmp;
+            Categoria categoriaTmp;
+            RegistroDiarioAccion registroDiarioAccionTmp;
+            while (it1.hasNext()) {
+                Object[] objectsTmp = it1.next();
+
+                System.out.println(">>>objectsTmp.length:"
+                        + objectsTmp.length);
+                accionBursatilTmp = (AccionBursatil) objectsTmp[0];
+                System.out.println(">>>accionBursatilTmp:"
+                        + AccionBursatilEH.toString(accionBursatilTmp) );
+                //categoriaTmp = (Categoria) objectsTmp[1];
+                //System.out.println(">>>categoriaTmp:"
+                //        + categoriaTmp);
+                registroDiarioAccionTmp = (RegistroDiarioAccion) objectsTmp[1];
+                System.out.println(">>>RegistroDiarioAccion:"
+                        + RegistroDiarioAccionEH.toString(registroDiarioAccionTmp) );
+
+            }
+
+            em.getTransaction().commit();
+
+        } catch (Exception e1_1) {
+
+            logger.error("e1_1:" + e1_1.getMessage(), e1_1);
+            try {
+                if (em != null && em.getTransaction() != null) {
+                    em.getTransaction().rollback();
+                }
+
+            } catch (Exception e1_2) {
+
+                logger.error("e1_2:" + e1_2.getMessage(), e1_2);
+                throw e1_2;
+            }
+            throw e1_1;
+        } finally {
+            if (em != null) {
+                em.close();
+            }
+        }
 
 
     }
