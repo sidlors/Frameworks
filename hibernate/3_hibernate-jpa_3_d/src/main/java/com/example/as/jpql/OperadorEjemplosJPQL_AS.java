@@ -1,5 +1,6 @@
 /*
-APPLICATION SERVICE
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
  */
 package com.example.as.jpql;
 
@@ -233,220 +234,220 @@ public class OperadorEjemplosJPQL_AS {
 
     public void ejemploSelect() throws Exception {
 
-//        EntityManager em = null;
-//
-//        try {
-//			em = JPAUtil.getEMF1().createEntityManager();
-//            em.getTransaction().begin();
-//
-//            CargarDatosAS cargarDatosAS = new CargarDatosAS();
-//            cargarDatosAS.setEntityManager(em);
-//            cargarDatosAS.cargarDatos();
-//
-//            AccionBursatilDAO accionBursatilDAO = new AccionBursatilDAO();
-//            accionBursatilDAO.setEntityManager(em);
-//            List<Object[]> datos = accionBursatilDAO.jpql_obtenerSelect1DeAccion();
-//
-//            System.out.println(">>>datos.size:"
-//                    + datos.size());
-//
-//            Iterator<Object[]> it1 = datos.iterator();
-//            Object[] objectsTmp;
-//            String datoTmp;
-//            while (it1.hasNext()) {
-//                objectsTmp = it1.next();
-//                datoTmp = (String) objectsTmp[0];
-//
-//                System.out.print(">>>datoTmp[0]:"
-//                        + datoTmp);
-//                datoTmp = (String) objectsTmp[1];
-//
-//                System.out.print(">>>datoTmp[1]:"
-//                        + datoTmp);
-//                System.out.println("");
-//
-//            }
-//
-//            em.getTransaction().commit();
-//
-//        } catch (Exception e1_1) {
-//
-//            logger.error("e1_1:" + e1_1.getMessage(), e1_1);
-//            try {
-//                if (em != null && em.getTransaction() != null) {
-//                    em.getTransaction().rollback();
-//                }
-//
-//            } catch (Exception e1_2) {
-//
-//                logger.error("e1_2:" + e1_2.getMessage(), e1_2);
-//                throw e1_2;
-//            }
-//            throw e1_1;
-//        } finally {
-//            if (em != null) {
-//                em.close();
-//            }
-//        }
+        EntityManager em = null;
+
+        try {
+			em = JPAUtil.getEMF1().createEntityManager();
+            em.getTransaction().begin();
+
+            CargarDatosAS cargarDatosAS = new CargarDatosAS();
+            cargarDatosAS.setEntityManager(em);
+            cargarDatosAS.cargarDatos();
+
+            AccionBursatilDAO accionBursatilDAO = new AccionBursatilDAO();
+            accionBursatilDAO.setEntityManager(em);
+            List<Object[]> datos = accionBursatilDAO.jpql_obtenerSelect1DeAccion();
+
+            System.out.println(">>>datos.size:"
+                    + datos.size());
+
+            Iterator<Object[]> it1 = datos.iterator();
+            Object[] objectsTmp;
+            String datoTmp;
+            while (it1.hasNext()) {
+                objectsTmp = it1.next();
+                datoTmp = (String) objectsTmp[0];
+
+                System.out.print(">>>datoTmp[0]:"
+                        + datoTmp);
+                datoTmp = (String) objectsTmp[1];
+
+                System.out.print(">>>datoTmp[1]:"
+                        + datoTmp);
+                System.out.println("");
+
+            }
+
+            em.getTransaction().commit();
+
+        } catch (Exception e1_1) {
+
+            logger.error("e1_1:" + e1_1.getMessage(), e1_1);
+            try {
+                if (em != null && em.getTransaction() != null) {
+                    em.getTransaction().rollback();
+                }
+
+            } catch (Exception e1_2) {
+
+                logger.error("e1_2:" + e1_2.getMessage(), e1_2);
+                throw e1_2;
+            }
+            throw e1_1;
+        } finally {
+            if (em != null) {
+                em.close();
+            }
+        }
 
     }
 
     public void ejemploUpdate() throws Exception {
 
-//        EntityManager em = null;
-//
-//        try {
-//
-//			em = JPAUtil.getEMF1().createEntityManager();
-//            em.getTransaction().begin();
-//
-//            CargarDatosAS cargarDatosAS = new CargarDatosAS();
-//            cargarDatosAS.setEntityManager(em);
-//            cargarDatosAS.cargarDatos();
-//
-//            AccionBursatilDAO accionBursatilDAO = new AccionBursatilDAO();
-//            accionBursatilDAO.setEntityManager(em);
-//            AccionBursatil accionBursatil = 
-//                    accionBursatilDAO.findById(1);
-//
-//            System.out.println(">>>accionBursatil:"
-//                    + AccionBursatilEH.toString(accionBursatil) );
-//
-//            int res = accionBursatilDAO.jpql_updateAccion(1);
-//
-//            System.out.println(">>>res:"
-//                    + res);
-//
-//            em.refresh(accionBursatil);
-//            System.out.println(">>>accionBursatil:"
-//                    + AccionBursatilEH.toString(accionBursatil) );
-//
-//
-//            em.getTransaction().commit();
-//
-//        } catch (Exception e1_1) {
-//            logger.error("e1_1:" + e1_1.getMessage(), e1_1);
-//            try {
-//                if (em != null && em.getTransaction() != null) {
-//                    em.getTransaction().rollback();
-//                }
-//
-//            } catch (Exception e1_2) {
-//
-//                logger.error("e1_2:" + e1_2.getMessage(), e1_2);
-//                throw e1_2;
-//            }
-//            throw e1_1;
-//        } finally {
-//            if (em != null) {
-//                em.close();
-//            }
-//        }
+        EntityManager em = null;
+
+        try {
+
+			em = JPAUtil.getEMF1().createEntityManager();
+            em.getTransaction().begin();
+
+            CargarDatosAS cargarDatosAS = new CargarDatosAS();
+            cargarDatosAS.setEntityManager(em);
+            cargarDatosAS.cargarDatos();
+
+            AccionBursatilDAO accionBursatilDAO = new AccionBursatilDAO();
+            accionBursatilDAO.setEntityManager(em);
+            AccionBursatil accionBursatil = 
+                    accionBursatilDAO.findById(1);
+
+            System.out.println(">>>accionBursatil:"
+                    + AccionBursatilEH.toString(accionBursatil) );
+
+            int res = accionBursatilDAO.jpql_updateAccion(1);
+
+            System.out.println(">>>res:"
+                    + res);
+
+            em.refresh(accionBursatil);
+            System.out.println(">>>accionBursatil:"
+                    + AccionBursatilEH.toString(accionBursatil) );
+
+
+            em.getTransaction().commit();
+
+        } catch (Exception e1_1) {
+            logger.error("e1_1:" + e1_1.getMessage(), e1_1);
+            try {
+                if (em != null && em.getTransaction() != null) {
+                    em.getTransaction().rollback();
+                }
+
+            } catch (Exception e1_2) {
+
+                logger.error("e1_2:" + e1_2.getMessage(), e1_2);
+                throw e1_2;
+            }
+            throw e1_1;
+        } finally {
+            if (em != null) {
+                em.close();
+            }
+        }
 
     }
 
     public void ejemploInsert() throws Exception {
         
-//        EntityManager em = null;
-//
-//        try {
-//
-//			em = JPAUtil.getEMF1().createEntityManager();
-//            em.getTransaction().begin();
-//
-//            CargarDatosAS cargarDatosAS = new CargarDatosAS();
-//            cargarDatosAS.setEntityManager(em);
-//            cargarDatosAS.cargarDatos();
-//
-//            AccionBursatilDAO accionBursatilDAO = new AccionBursatilDAO();
-//            accionBursatilDAO.setEntityManager(em);
-//            
-//            AccionBursatil accionBursatil = 
-//                    accionBursatilDAO.findById( 1);
-//
-//            System.out.println(">>>accionBursatil:"
-//                    + AccionBursatilEH.toString(accionBursatil) );
-//
-//            int res = accionBursatilDAO.jpql_insertAccion(1);
-//
-//            System.out.println(">>>res:"
-//                    + res);
-//
-//            em.getTransaction().commit();
-//
-//        } catch (Exception e1_1) {
-//
-//            logger.error("e1_1:" + e1_1.getMessage(), e1_1);
-//            try {
-//                if (em != null && em.getTransaction() != null) {
-//                    em.getTransaction().rollback();
-//                }
-//
-//            } catch (Exception e1_2) {
-//
-//                logger.error("e1_2:" + e1_2.getMessage(), e1_2);
-//                throw e1_2;
-//            }
-//            throw e1_1;
-//        } finally {
-//            if (em != null) {
-//                em.close();
-//            }
-//        }
+        EntityManager em = null;
+
+        try {
+
+			em = JPAUtil.getEMF1().createEntityManager();
+            em.getTransaction().begin();
+
+            CargarDatosAS cargarDatosAS = new CargarDatosAS();
+            cargarDatosAS.setEntityManager(em);
+            cargarDatosAS.cargarDatos();
+
+            AccionBursatilDAO accionBursatilDAO = new AccionBursatilDAO();
+            accionBursatilDAO.setEntityManager(em);
+            
+            AccionBursatil accionBursatil = 
+                    accionBursatilDAO.findById( 1);
+
+            System.out.println(">>>accionBursatil:"
+                    + AccionBursatilEH.toString(accionBursatil) );
+
+            int res = accionBursatilDAO.jpql_insertAccion(1);
+
+            System.out.println(">>>res:"
+                    + res);
+
+            em.getTransaction().commit();
+
+        } catch (Exception e1_1) {
+
+            logger.error("e1_1:" + e1_1.getMessage(), e1_1);
+            try {
+                if (em != null && em.getTransaction() != null) {
+                    em.getTransaction().rollback();
+                }
+
+            } catch (Exception e1_2) {
+
+                logger.error("e1_2:" + e1_2.getMessage(), e1_2);
+                throw e1_2;
+            }
+            throw e1_1;
+        } finally {
+            if (em != null) {
+                em.close();
+            }
+        }
 
     }
 
     public void ejemploDelete() throws Exception {
         
-//        EntityManager em = null;
-//
-//
-//        try {
-//
-//			em = JPAUtil.getEMF1().createEntityManager();
-//            em.getTransaction().begin();
-//
-//            CargarDatosAS cargarDatosAS = new CargarDatosAS();
-//            cargarDatosAS.setEntityManager(em);
-//            cargarDatosAS.cargarDatos();
-//
-//            AccionBursatilDAO accionBursatilDAO = new AccionBursatilDAO();
-//            accionBursatilDAO.setEntityManager(em);
-//            
-//            AccionBursatil accionBursatil = 
-//                    accionBursatilDAO.findById( 1);
-//
-//            System.out.println(">>>accionBursatil:"
-//                    + AccionBursatilEH.toString(accionBursatil) );
-//
-//            AccionBursatil accionBursatil1 = new AccionBursatil();
-//            accionBursatilDAO.setEntityManager(em);
-//            int res = accionBursatilDAO.jpql_deleteDetalleAccion();
-//
-//            System.out.println(">>>res:"
-//                    + res);
-//
-//            em.getTransaction().commit();
-//
-//        } catch (Exception e1_1) {
-//            logger.error("e1_1:" + e1_1.getMessage(), e1_1);
-//            try {
-//                if (em != null && em.getTransaction() != null) {
-//                    em.getTransaction().rollback();
-//                }
-//
-//            } catch (Exception e1_2) {
-//
-//                logger.error("e1_2:" + e1_2.getMessage(), e1_2);
-//                throw e1_2;
-//            }
-//            throw e1_1;
-//        } finally {
-//            if (em != null) {
-//                em.close();
-//            }
-//        }
-//
+        EntityManager em = null;
+
+
+        try {
+
+			em = JPAUtil.getEMF1().createEntityManager();
+            em.getTransaction().begin();
+
+            CargarDatosAS cargarDatosAS = new CargarDatosAS();
+            cargarDatosAS.setEntityManager(em);
+            cargarDatosAS.cargarDatos();
+
+            AccionBursatilDAO accionBursatilDAO = new AccionBursatilDAO();
+            accionBursatilDAO.setEntityManager(em);
+            
+            AccionBursatil accionBursatil = 
+                    accionBursatilDAO.findById( 1);
+
+            System.out.println(">>>accionBursatil:"
+                    + AccionBursatilEH.toString(accionBursatil) );
+
+            AccionBursatil accionBursatil1 = new AccionBursatil();
+            accionBursatilDAO.setEntityManager(em);
+            int res = accionBursatilDAO.jpql_deleteDetalleAccion();
+
+            System.out.println(">>>res:"
+                    + res);
+
+            em.getTransaction().commit();
+
+        } catch (Exception e1_1) {
+            logger.error("e1_1:" + e1_1.getMessage(), e1_1);
+            try {
+                if (em != null && em.getTransaction() != null) {
+                    em.getTransaction().rollback();
+                }
+
+            } catch (Exception e1_2) {
+
+                logger.error("e1_2:" + e1_2.getMessage(), e1_2);
+                throw e1_2;
+            }
+            throw e1_1;
+        } finally {
+            if (em != null) {
+                em.close();
+            }
+        }
+
 
 
     }
