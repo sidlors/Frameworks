@@ -6,10 +6,14 @@ public class AccionBursatilEH {
 
 //	static public String toString(AccionBursatil accionBursatil) {
 //
-//		return "AccionBursatil [idAccionBursatil=" + accionBursatil.getIdAccionBursatil()
-//				+ ", codigoAccion=" + accionBursatil.getCodigoAccion() + ", nombreAccion="
-//				+ accionBursatil.getNombreAccion() + "]";
-//
+//		String toString = null;
+//		if (accionBursatil != null) {
+//			toString = "AccionBursatil [idAccionBursatil="
+//					+ accionBursatil.getIdAccionBursatil() + ", codigoAccion="
+//					+ accionBursatil.getCodigoAccion() + ", nombreAccion="
+//					+ accionBursatil.getNombreAccion() + "]";
+//		}
+//		return toString;
 //	}
-	
+
 }

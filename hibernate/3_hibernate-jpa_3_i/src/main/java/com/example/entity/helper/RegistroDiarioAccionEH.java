@@ -5,11 +5,18 @@ package com.example.entity.helper;
 public class RegistroDiarioAccionEH {
 
 //	static public String toString(RegistroDiarioAccion registroDiarioAccion) {
-//		return "RegistroDiarioAccion [idRegistroDiarioAccion="
-//				+ registroDiarioAccion.getIdRegistroDiarioAccion() + ", fecha="
-//				+ registroDiarioAccion.getFecha() + ", precioApertura="
-//				+ registroDiarioAccion.getPrecioApertura() + ", precioCierre="
-//				+ registroDiarioAccion.getPrecioCierre() + "]";
+//
+//		String toString = null;
+//		if (registroDiarioAccion != null) {
+//			toString = "RegistroDiarioAccion [idRegistroDiarioAccion="
+//					+ registroDiarioAccion.getIdRegistroDiarioAccion()
+//					+ ", fecha=" + registroDiarioAccion.getFecha()
+//					+ ", precioApertura="
+//					+ registroDiarioAccion.getPrecioApertura()
+//					+ ", precioCierre="
+//					+ registroDiarioAccion.getPrecioCierre() + "]";
+//		}
+//		return toString;
 //	}
 
 }

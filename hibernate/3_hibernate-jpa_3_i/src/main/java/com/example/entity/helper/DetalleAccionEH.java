@@ -4,12 +4,19 @@ package com.example.entity.helper;
 
 public class DetalleAccionEH {
 
-	
 //	static public String toString(DetalleAccion detalleAccion) {
-//		return "DetalleAccion [idDetalleAccion=" +  detalleAccion.getIdDetalleAccion()
-//				+ ", descripcionCompania=" + detalleAccion.getDescripcionCompania()
-//				+ ", fechaRevision=" + detalleAccion.getFechaRevision() + ", nombreCompania="
-//				+ detalleAccion.getNombreCompania() + "]";
+//
+//		String toString = null;
+//		if (detalleAccion != null) {
+//			toString = "DetalleAccion [idDetalleAccion="
+//					+ detalleAccion.getIdDetalleAccion()
+//					+ ", descripcionCompania="
+//					+ detalleAccion.getDescripcionCompania()
+//					+ ", fechaRevision=" + detalleAccion.getFechaRevision()
+//					+ ", nombreCompania=" + detalleAccion.getNombreCompania()
+//					+ "]";
+//		}
+//		return toString;
 //	}
-	
+
 }

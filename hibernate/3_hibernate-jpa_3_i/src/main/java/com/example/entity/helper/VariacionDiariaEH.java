@@ -5,8 +5,14 @@ package com.example.entity.helper;
 public class VariacionDiariaEH {
 
 //	static public String toString(VariacionDiaria variacionDiaria) {
-//		return "VariacionDiaria [idVariacionDiaria=" +  variacionDiaria.getIdVariacionDiaria()
-//				+ ", variacion=" + variacionDiaria.getVariacion() + "]";
+//
+//		String toString = null;
+//		if (variacionDiaria != null) {
+//			return "VariacionDiaria [idVariacionDiaria="
+//					+ variacionDiaria.getIdVariacionDiaria() + ", variacion="
+//					+ variacionDiaria.getVariacion() + "]";
+//		}
+//		return toString;
 //	}
-	
+
 }

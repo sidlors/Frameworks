@@ -5,9 +5,14 @@ package com.example.entity.helper;
 public class CategoriaEH {
 
 //	static public String toString(Categoria categoria) {
-//		return "Categoria [idCategoria=" + categoria.getIdCategoria()
+//		
+//		String toString = null;
+//		if (categoria != null) {		
+//		toString = "Categoria [idCategoria=" + categoria.getIdCategoria()
 //				+ ", descripcion=" + categoria.getDescripcion() + ", nombre="
 //				+ categoria.getNombre() + "]";
+//		}
+//		return toString;
 //	}
 
 }
