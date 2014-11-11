@@ -1,0 +1,4 @@
+
+a) Notamos dentro del pom.xml inicial, las seccion <build>
+
+b) Corregir pruebaAJAX_EXTJS.jsp
