@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- REALIZAR: alternar scope. Podria ser scope="prototype" o no tener (ser singleton) -->
+	<bean id="holaMundo" class="HolaMundo" scope="singleton">
+		<constructor-arg index="0" value="10" type="int"></constructor-arg>
+		<property name="mensaje" value="Hola Mundo Spring"></property>
+		<property name="service" ref="holaService">
+
+		</property>
+	</bean>
+
+	<bean id="holaService" class="HolaService">
+	</bean>
+</beans>
