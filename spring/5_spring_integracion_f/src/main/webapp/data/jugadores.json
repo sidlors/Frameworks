@@ -1,0 +1,29 @@
+[
+	{
+    	"id_jugador": 1,
+        "id_equipo": 1,
+        "nombre": 'nombre1',
+        "apellido_paterno": 'apellidop1',
+        "apellido_materno": 'apellidom1',
+        "fecha_nacimiento": '2009-08-11',
+        "numero_camiseta": 1
+	},
+    {
+    	"id_jugador": 2,
+        "id_equipo": 1,
+        "nombre": 'nombre2',
+        "apellido_paterno": 'apellidop2',
+        "apellido_materno": 'apellidom2',
+        "fecha_nacimiento": '2009-08-11',
+        "numero_camiseta": 2
+     },
+     {
+    	"id_jugador": 3,
+        "id_equipo": 2,
+        "nombre": 'nombre3',
+        "apellido_paterno": 'apellidop3',
+        "apellido_materno": 'apellidom3',
+        "fecha_nacimiento": '2009-08-11',
+        "numero_camiseta": 3
+     }
+]

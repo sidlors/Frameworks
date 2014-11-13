@@ -1,0 +1,32 @@
+[
+	{
+    	"id": 11,
+        "title": 'A Momentary Lapse of Reason',
+        "tracks": 10,
+        "artist": 'Pink Floyd',
+        "length": '51:14',
+        "year": '1980',
+        "producer": 'Bob Ezrin',
+        "diskLabel": 'EMI'
+	},
+    {
+    	"id": 12,
+        "title": 'Ten',
+        "tracks": 11,
+        "artist": 'Pearl Jam',
+        "length": '53:20',
+        "year": '1991',
+        "producer": 'Rick Parashar',
+        "diskLabel": 'Epic'
+     },
+     {
+    	"id": 13,
+        "title": 'Re',
+        "tracks": 20,
+        "artist": 'Cafe Tacuba',
+        "length": '59:53',
+        "year": '1994',
+        "producer": 'Gustavo Santaolalla',
+        "diskLabel": 'Warner Music Mexico'
+     }
+]

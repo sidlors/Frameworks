@@ -1,0 +1,42 @@
+
+
+-- DROP TABLE IF EXISTS equipos,jugadores;
+DROP TABLE IF EXISTS jugadores,equipos;
+
+CREATE TABLE equipos (
+                id_equipo INT AUTO_INCREMENT NOT NULL,
+                nombre VARCHAR(100) NOT NULL,
+                apodo VARCHAR(100),
+                propietario VARCHAR(100),
+                director_tecnico VARCHAR(100),
+                pagina_web VARCHAR(100),
+                estadio_casa_nombre VARCHAR(100),
+                estadio_casa_direccion VARCHAR(100),
+                fecha_fundacion DATE,
+                fecha_baja DATE,
+                PRIMARY KEY (id_equipo)
+);
+
+
+CREATE TABLE jugadores (
+                id_jugador INT AUTO_INCREMENT NOT NULL,
+                id_equipo INT NOT NULL,
+                nombre VARCHAR(100) NOT NULL,
+                apellido_paterno VARCHAR(100) NOT NULL,
+                apellido_materno VARCHAR(100),
+                fecha_nacimiento DATE NOT NULL,
+                numero_camiseta VARCHAR(3) NOT NULL,
+                PRIMARY KEY (id_jugador)
+);
+
+
+ALTER TABLE jugadores ADD CONSTRAINT equipos_jugadores_fk
+FOREIGN KEY (id_equipo)
+REFERENCES equipos (id_equipo)
+ON DELETE NO ACTION
+ON UPDATE NO ACTION;
+
+
+
+
+

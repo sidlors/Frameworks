@@ -1,0 +1,38 @@
+[
+	{
+    	"idEquipo": 1,
+        "nombre": 'nombre1',
+        "apodo": 'apodo1',
+        "propietario": 'propietario1',
+        "directorTecnico": 'director1',
+        "paginaWeb": 'www.uno.com',        
+        "estadioCasaNombre": 'uno',
+		"estadioCasaDireccion": 'av. uno',
+		"fechaFundacion": '2010-08-11',
+        "fechaBaja": '2011-08-11'
+	},
+    {
+    	"idEquipo": 2,
+        "nombre": 'nombre2',
+        "apodo": 'apodo2',
+        "propietario": 'propietario2',
+        "directorTecnico": 'director2',
+        "paginaWeb": 'www.dos.com',        
+        "estadioCasaNombre": 'dos',
+		"estadioCasaDireccion": 'av. dos',
+		"fechaFundacion": '2010-08-11',
+        "fechaBaja": '2011-08-11'
+     },
+     {
+    	"idEquipo": 3,
+        "nombre": 'nombre3',
+        "apodo": 'apodo3',
+        "propietario": 'propietario3',
+        "directorTecnico": 'director3',
+        "paginaWeb": 'www.tres.com',        
+        "estadioCasaNombre": 'tres',
+		"estadioCasaDireccion": 'av. tres',
+		"fechaFundacion": '2010-08-11',
+        "fechaBaja": '2011-08-11'
+     }
+]
