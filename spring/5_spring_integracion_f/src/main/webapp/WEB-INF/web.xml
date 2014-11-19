@@ -15,6 +15,7 @@
     <url-pattern>/*</url-pattern>
   </filter-mapping>
 
+<!-- configuracion de spring container -->
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>

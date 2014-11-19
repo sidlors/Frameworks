@@ -8,7 +8,7 @@
  * 
  * FIN NOTA1
  */
-
+// carga el namespace para estar disponible dinamicamente por ajax
 Ext.Loader.setConfig({
 	enabled : true,
 	paths : {
@@ -18,6 +18,7 @@ Ext.Loader.setConfig({
 
 // Requeridos para nuestras clases
 // Ext.syncRequire('ExtUtil.Conzole');
+// siempre que se puede debera de incluirse la clase para que se pueda "debugear"
 Ext.require('ExtUtil.Conzole');
 // Ext.require('ExtUtil.*');
 
@@ -37,7 +38,7 @@ Ext.application({
 	// requires:['ExtUtil.Conzole'],
 	controllers : [ 'InitController', 'BienvenidaController',
 			'AdminEquiposController', 'AdminJugadoresController' ],
-
+//handler de carga todo el dom del documento
 	launch : function() {
 
 		ExtUtil.Conzole.log('Ext.application - launch');
